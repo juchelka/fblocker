@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook news feed blocker",
+  "description": "This stops you slacking on facebook",
+  "version": "0.1",
+
+  "permissions": [
+    "http://www.facebook.com/*",
+    "https://www.facebook.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+      "js": ["eradicate.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
